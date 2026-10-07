@@ -407,4 +407,17 @@ footer {
   padding: 2rem 1rem;
 }
 
-.src{font-size:.85rem;color:var(--muted);margin:.4rem 0}
+.src {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.4rem 0;
+}
+
+#pustaka li {
+  overflow-wrap: anywhere; /* patahin URL panjang di mana saja */
+  word-break: break-word; /* fallback browser lama */
+}
+
+#pustaka li a {
+  overflow-wrap: anywhere;
+}
