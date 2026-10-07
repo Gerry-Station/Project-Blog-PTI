@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog PTI – Dunia Sistem, Informasi & Pengetahuan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="bar"></div>
+
+    <nav>
+      <b class="logo">&lt;&gt;</b>
+      <div id="menu">
+        <a href="#sistem">Sistem</a><a href="#informasi">Informasi</a
+        ><a href="#pengetahuan">Pengetahuan</a>
+        <a href="#manajemen">Manajemen</a><a href="#dbms">DBMS</a
+        ><a href="#perbedaan">Sistem Pakar</a> <a href="#kuis">Kuis</a
+        ><a href="#video">Video</a><a href="#pustaka">Pustaka</a>
+      </div>
+      <button id="theme" aria-label="Ganti tema">🌓</button>
+    </nav>
+
+    <header class="hero">
+      <canvas id="net"></canvas>
+      <div class="hero-text">
+        <p class="tag">
+          Proyek PjBL • Pengantar Teknologi Informasi • SI UINSU
+        </p>
+        <h1><span id="typed"></span><i class="cursor">|</i></h1>
+        <p class="sub">
+          Jelajahi konsep dasar lewat demo interaktif. Klik, geser, dan coba
+          sendiri!
+        </p>
+        <p class="by">
+          Oleh <b>Jona Gerry Aoysius Simanjuntak</b> • NIM 0702262064
+        </p>
+        <a class="btn" href="#sistem">Mulai Belajar ↓</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="sistem" class="reveal">
+        <h2><span>01</span> Pengertian Sistem</h2>
+        <p>
+          Sistem adalah kumpulan elemen yang saling berhubungan dan bekerja sama
+          untuk mencapai tujuan tertentu.
+          <em>(Jogiyanto, 2005)</em> Mulyati (2005) menegaskan bahwa sistem
+          adalah himpunan objek beserta hubungan antarobjek yang disusun untuk
+          tujuan bersama; kinerja komponen yang bekerja kolektif dapat melampaui
+          jumlah kinerja masing-masing komponen (efek sinergi).
+        </p>
+        <p class="hint">
+          👇 Klik tiap tahap untuk melihat contoh <b>Sistem Akademik Kampus</b>
+        </p>
+        <div class="ipo">
+          <button
+            class="chip on"
+            data-t="Mahasiswa mengisi KRS, data nilai, dan absensi masuk ke sistem."
+          >
+            INPUT
+          </button>
+          <span>➜</span>
+          <button
+            class="chip"
+            data-t="Sistem menghitung IPK, memeriksa batas SKS, dan memvalidasi jadwal."
+          >
+            PROSES
+          </button>
+          <span>➜</span>
+          <button
+            class="chip"
+            data-t="Keluar KHS, transkrip, dan jadwal kuliah yang siap dicetak."
+          >
+            OUTPUT
+          </button>
+        </div>
+        <div class="box" id="ipoText">
+          Mahasiswa mengisi KRS, data nilai, dan absensi masuk ke sistem.
+        </div>
+        <p class="hint">👥 Klik nama tokoh untuk melihat pandangannya tentang sistem</p>
+        <div class="tabs" id="ahli">
+          <button class="chip on" data-t="Jogiyanto: sistem adalah kumpulan unsur yang saling berinteraksi untuk mencapai tujuan tertentu.">Jogiyanto</button>
+          <button class="chip" data-t="Indrajit: sistem adalah himpunan komponen yang unsurnya saling berkaitan satu sama lain.">Indrajit</button>
+          <button class="chip" data-t="Fagen &amp; Hall: sistem adalah kumpulan objek beserta hubungan antarobjek dan hubungan antarsifatnya.">Fagen &amp; Hall</button>
+          <button class="chip" data-t="Kristanto: sistem adalah jaringan prosedur yang saling terkait dan bekerja bersama menyelesaikan sasaran tertentu.">Kristanto</button>
+          <button class="chip" data-t="Djojodihardjo: sistem adalah sekumpulan objek yang berhubungan secara fungsi sehingga menjadi satu kesatuan yang berfungsi.">Djojodihardjo</button>
+        </div>
+        <div class="box" id="ahliText">Jogiyanto: sistem adalah kumpulan unsur yang saling berinteraksi untuk mencapai tujuan tertentu.</div>
+        <p class="src">Sumber: <a href="https://accurate.id/marketing-manajemen/pengertian-sistem/" target="_blank" rel="noopener">Accurate (t.t.)</a></p>
+        <div class="contoh">
+          <b>Contoh lain:</b> sistem pencernaan, sistem transportasi, sistem ATM.
+          <br /><b>Contoh sistem informasi:</b> sistem informasi akademik (data siswa, jadwal, nilai), keuangan (pencatatan transaksi dan laporan), serta penjualan dan pemasaran (e-commerce) (Fakultas Sains dan Teknologi Unair, 2024). Dalam organisasi, sistem informasi manajemen membantu pengambilan keputusan (Syahputra et al., 2022; Nursida et al., 2024).
+        </div>
+      </section>
+
+      <section id="informasi" class="reveal">
+        <h2><span>02</span> Pengertian Informasi</h2>
+        <p>
+          Informasi adalah data yang sudah diolah menjadi bentuk yang berguna
+          dan bermakna untuk pengambilan keputusan.
+          <em>(Mulyati, 2005)</em> Data adalah fakta mentah, sedangkan informasi
+          adalah data yang ditempatkan dalam konteks yang bermakna bagi
+          penerimanya. Informasi yang baik antara lain tepat waktu, akurat,
+          dapat diuji, dan relevan dengan kebutuhan pengguna.
+        </p>
+        <p class="hint">🎚️ Geser slider: data ➜ informasi ➜ pengetahuan</p>
+        <input type="range" id="dik" min="0" max="2" value="0" />
+        <div class="box big" id="dikOut"></div>
+        <p>Urutan ini dikenal sebagai hierarki DIKW: data yang tercatat dimaknai menjadi informasi, lalu menjadi pengetahuan untuk mengambil keputusan (Grataridarga, 2019).</p>
+        <p class="hint">🃏 Klik kartu untuk melihat ciri-ciri informasi yang baik</p>
+        <div class="cards"><div class="flip"><div><b>Kualitas</b></div><div>Memenuhi kebutuhan penerima. Contoh: jadwal ujian diberikan sebelum ujian.</div></div><div class="flip"><div><b>Aktual</b></div><div>Baru dan masih dibutuhkan. Contoh: prakiraan cuaca hari ini.</div></div><div class="flip"><div><b>Relevan</b></div><div>Sesuai fakta dan berguna. Contoh: petani menerima info musim tanam.</div></div><div class="flip"><div><b>Tepat &amp; Benar</b></div><div>Akurat, tidak palsu. Contoh: nilai siswa sesuai hasil ujian.</div></div><div class="flip"><div><b>Lengkap</b></div><div>Tidak menimbulkan salah paham. Contoh: pengumuman lomba memuat syarat, waktu, tempat.</div></div><div class="flip"><div><b>Kuantitas</b></div><div>Jumlahnya cukup bagi pengguna. Contoh: panduan aplikasi menjelaskan semua fitur penting.</div></div></div>
+        <p class="src">Sumber: <a href="https://www.kompas.com/skola/read/2023/03/23/110000669/informasi--ciri-ciri-komponen-dan-contohnya?page=all" target="_blank" rel="noopener">Kompas.com (2023b)</a></p>
+      </section>
+
+      <section id="pengetahuan" class="reveal">
+        <h2><span>03</span> Pengetahuan & Pakar</h2>
+        <p>
+          Pengetahuan adalah informasi yang sudah dipahami dan dikaitkan dengan
+          pengalaman sehingga bisa dipakai untuk bertindak. Pakar adalah orang
+          dengan keahlian mendalam pada bidang tertentu.
+          <em>(Kusrini, 2006)</em>
+        </p>
+        <p class="hint">🃏 Klik kartu untuk membaliknya</p>
+        <div class="cards">
+          <div class="flip">
+            <div><b>Pengetahuan</b></div>
+            <div>
+              Hasil mengetahui; contoh: tahu bahwa IPK di bawah 2,0 berisiko
+              diberi peringatan akademik.
+            </div>
+          </div>
+          <div class="flip">
+            <div><b>Pakar</b></div>
+            <div>
+              Contoh: dokter spesialis jantung, ahli hama tanaman, atau dosen
+              senior di bidangnya.
+            </div>
+          </div>
+          <div class="flip">
+            <div><b>Basis Pengetahuan</b></div>
+            <div>
+              Tempat pengetahuan pakar disimpan di komputer dalam bentuk fakta
+              dan aturan IF–THEN.
+            </div>
+          </div>
+        </div>
+        <p class="src">Pengetahuan dipahami sebagai informasi yang dimengerti lewat pengalaman, pengamatan, dan proses belajar (Kementerian Pendidikan Tinggi, Sains, dan Teknologi, t.t.).</p>
+        <p class="hint">🧠 Klik jenis pengetahuan pakar</p>
+        <div class="tabs" id="jenis"><button class="chip on" data-t="Informasi nyata tentang suatu objek. Contoh: suhu tubuh pasien di atas 38,5°C.">Fakta</button><button class="chip" data-t="Prinsip ilmiah yang menjelaskan sebab-akibat. Contoh: infeksi bakteri dapat menaikkan jumlah sel darah putih.">Teori</button><button class="chip" data-t="Langkah berurutan untuk mencapai tujuan. Contoh: langkah kalibrasi mesin pabrik.">Prosedur</button><button class="chip" data-t="Aturan praktis dari pengalaman pakar. Contoh: nyeri dada kiri menjalar ke lengan, kemungkinan besar indikasi serangan jantung.">Heuristik</button><button class="chip" data-t="Aturan produksi berformat IF–THEN. Contoh: IF demam dan bintik merah THEN suspek demam berdarah.">Aturan</button></div>
+        <div class="box" id="jenisText">Informasi nyata tentang suatu objek. Contoh: suhu tubuh pasien di atas 38,5°C.</div>
+        <p class="src">Sumber: <a href="https://binus.ac.id/bandung/2019/11/sistem-pakar-pada-era-industri-4-0/" target="_blank" rel="noopener">Binus University (2019)</a></p>
+      </section>
+
+      <section id="manajemen" class="reveal">
+        <h2><span>04</span> Pengertian Manajemen</h2>
+        <p>
+          Manajemen adalah proses merencanakan, mengorganisasikan, mengarahkan,
+          dan mengendalikan sumber daya agar tujuan organisasi tercapai efektif
+          dan efisien. <em>(Terry &amp; Rue, 2010)</em> Dalam studi pada
+          mahasiswa MPI IAIN Takengon, kemampuan menerapkan keempat fungsi POAC
+          berada pada kisaran 70% (Sartika &amp; Nengsi, 2022).
+        </p>
+        <div class="tabs" id="poac">
+          <button
+            class="chip on"
+            data-t="Planning (Perencanaan): menentukan tujuan dan langkah. Contoh: menyusun jadwal proyek pembuatan blog."
+          >
+            P
+          </button>
+          <button
+            class="chip"
+            data-t="Organizing (Pengorganisasian): membagi tugas dan sumber daya. Contoh: membagi peran desain, konten, dan coding."
+          >
+            O
+          </button>
+          <button
+            class="chip"
+            data-t="Actuating (Pengarahan): menggerakkan pelaksanaan. Contoh: ketua tim memberi arahan dan motivasi."
+          >
+            A
+          </button>
+          <button
+            class="chip"
+            data-t="Controlling (Pengendalian): memantau dan mengevaluasi. Contoh: mengecek progres terhadap tenggat."
+          >
+            C
+          </button>
+        </div>
+        <div class="box" id="poacText">
+          Planning (Perencanaan): menentukan tujuan dan langkah. Contoh:
+          menyusun jadwal proyek pembuatan blog.
+        </div>
+        <div class="contoh"><b>Contoh di perusahaan pakaian:</b> Planning menetapkan tujuan laba dan strategi promosi; Organizing membagi karyawan ke divisi jahit, pembelian bahan, dan promosi; Actuating berupa bimbingan dan motivasi pimpinan saat produksi; Controlling berupa evaluasi kendala setelah produk dipasarkan (Kompas.com, 2021; Syahputra &amp; Aslami, 2023).</div>
+        <p class="hint">📋 Definisi manajemen menurut para ahli</p>
+        <div class="wrap"><table id="mjn"><thead><tr><th>Tokoh</th><th>Pengertian manajemen</th></tr></thead><tbody><tr><td>Kamars (2015)</td><td>Memanfaatkan sumber daya fisik maupun nonfisik untuk menyelesaikan pekerjaan atau masalah dengan baik.</td></tr><tr><td>Winardi (2016)</td><td>Proses khas berupa perencanaan, pengorganisasian, penggerakan, dan pengawasan untuk mencapai sasaran lewat pemanfaatan sumber daya.</td></tr><tr><td>Wibowo (2007)</td><td>Proses mengelola sumber daya organisasi, melibatkan orang lain, demi tujuan organisasi yang efisien dan efektif.</td></tr><tr><td>Bartol &amp; Martin (2015)</td><td>Proses mencapai tujuan lewat empat fungsi: merencanakan, mengorganisasi, memimpin, dan mengendalikan.</td></tr><tr><td>Follett &amp; Danim (2010)</td><td>Seni menyelesaikan pekerjaan melalui orang lain; manajer mengatur dan mengarahkan.</td></tr><tr><td>Gibson, Donnelly, &amp; Ivancevich (2015)</td><td>Proses oleh satu atau lebih individu mengoordinasikan aktivitas demi hasil yang tak dapat dicapai sendirian.</td></tr></tbody></table></div>
+        <p class="src">Sumber: <a href="https://telkomuniversity.ac.id/mengenal-konsep-manajemen-pengertian-tujuan-unsur-dan-fungsinya/" target="_blank" rel="noopener">Telkom University (t.t.-a)</a>; pendapat para tokoh dikutip dari laman tersebut.</p>
+      </section>
+
+      <section id="dbms" class="reveal">
+        <h2><span>05</span> Sistem Manajemen Basis Data (DBMS)</h2>
+        <p>
+          Basis data adalah kumpulan data terorganisasi yang saling berhubungan.
+          DBMS adalah perangkat lunak untuk membuat, mengelola, dan mengakses
+          basis data. <em>(Fathansyah, 2012; Widodo, 2024)</em>
+        </p>
+        <div class="contoh">
+          <b>Contoh DBMS:</b> MySQL • PostgreSQL • Oracle • SQL Server • SQLite • MongoDB dan Cassandra (NoSQL)
+        </div>
+        <div class="contoh"><b>Fungsi DBMS:</b> mengelola data (simpan, ambil, ubah, hapus), menjaga integritas dan konsistensi data, serta meningkatkan keamanan lewat kontrol akses. Basis data untuk sistem informasi dirancang secara konseptual dan logikal sebelum diimplementasikan (Pradipta, 2022). Sumber: <a href="https://aws.amazon.com/id/what-is/dbms/" target="_blank" rel="noopener">AWS (t.t.)</a>; <a href="https://bit.telkomuniversity.ac.id/apa-itu-dbms-pengertian-jenis-dan-contoh-dbms/" target="_blank" rel="noopener">Telkom University (t.t.-b)</a>.</div>
+        <p class="hint">
+          🔎 Mini database: ketik untuk mencari (seperti perintah SELECT ...
+          WHERE)
+        </p>
+        <input
+          type="search"
+          id="q"
+          placeholder="Cari nama atau prodi, mis. Sistem"
+        />
+        <div class="wrap">
+          <table id="db">
+            <thead>
+              <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Prodi</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <code id="sql">SELECT * FROM mahasiswa;</code>
+      </section>
+
+      <section id="perbedaan" class="reveal">
+        <h2><span>06</span> Sistem Pakar vs Sistem Berbasis Pengetahuan</h2>
+        <p>
+          Sistem berbasis pengetahuan (<i>knowledge-based system</i>) adalah
+          istilah yang lebih luas. Sistem pakar adalah salah satu jenisnya, yang
+          khusus meniru keahlian seorang pakar pada bidang sempit.
+          <em>(Kusrini, 2006; Sari et al., 2025)</em>
+        </p>
+        <div class="wrap">
+          <table id="cmp">
+            <thead>
+              <tr>
+                <th>Aspek</th>
+                <th>Sistem Pakar</th>
+                <th>Sistem Berbasis Pengetahuan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cakupan</td>
+                <td>Sempit (satu bidang keahlian)</td>
+                <td>Luas, mencakup sistem pakar</td>
+              </tr>
+              <tr>
+                <td>Sumber pengetahuan</td>
+                <td>Pakar manusia</td>
+                <td>Pakar, dokumen, kasus, data</td>
+              </tr>
+              <tr>
+                <td>Tujuan</td>
+                <td>Meniru keputusan pakar</td>
+                <td>Memanfaatkan pengetahuan untuk menyelesaikan masalah</td>
+              </tr>
+              <tr>
+                <td>Metode umum</td>
+                <td>Aturan IF–THEN, forward/backward chaining</td>
+                <td>Aturan, penalaran berbasis kasus, ontologi</td>
+              </tr>
+              <tr>
+                <td>Contoh</td>
+                <td>Diagnosis penyakit tanaman dari gejala</td>
+                <td>Help desk TI berbasis kasus</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Sistem pakar dengan forward chaining sudah dipakai di banyak bidang: diagnosis penyakit dan hama padi dengan akurasi 87,4% (Zuraida et al., 2023), hama dan penyakit kangkung dengan akurasi 90% (Nasrulloh et al., 2022), hingga gaya belajar mahasiswa (Sapriadi et al., 2023).</p>
+        <h3>🧪 Coba Sistem Pakar Mini: Diagnosis Penyakit Padi</h3>
+        <p class="hint">
+          Centang gejala, lalu mesin inferensi (forward chaining) mencocokkan
+          aturan. Ini hanya demo sederhana, bukan diagnosis resmi.
+        </p>
+        <div id="gejala" class="checks"></div>
+        <div class="box" id="hasil">Pilih minimal satu gejala…</div>
+        <ul id="trace"></ul>
+      </section>
+
+      <section id="kuis" class="reveal">
+        <h2><span>07</span> Kuis Singkat</h2>
+        <div id="quiz"></div>
+      </section>
+
+      <section id="video" class="reveal">
+        <h2><span>08</span> Video Pembelajaran</h2>
+        <div class="video">
+          <iframe
+            id="yt"
+            title="Video pembelajaran"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p>
+          Sumber video:
+          <a id="ytlink" href="#" target="_blank" rel="noopener"
+            >[judul video – nama channel]</a
+          >
+        </p>
+      </section>
+
+      <section id="pustaka" class="reveal">
+        <h2><span>09</span> Daftar Pustaka</h2>
+        <p><b>Buku</b></p>
+        <ol>
+          <li>
+            Fathansyah. (2012). <i>Basis data</i> (Edisi revisi). Bandung:
+            Informatika.
+          </li>
+          <li>
+            Jogiyanto, H. M. (2005).
+            <i
+              >Analisis dan desain sistem informasi: Pendekatan terstruktur
+              teori dan praktik aplikasi bisnis</i
+            >. Yogyakarta: Andi.
+          </li>
+          <li>
+            Kusrini. (2006). <i>Sistem pakar: Teori dan aplikasi</i>.
+            Yogyakarta: Andi.
+          </li>
+          <li>
+            Terry, G. R., &amp; Rue, L. W. (2010).
+            <i>Dasar-dasar manajemen</i> (G. A. Ticoalu, Penerj.; Edisi revisi).
+            Jakarta: Bumi Aksara.
+          </li>
+        </ol>
+        <p><b>Jurnal</b></p>
+        <ol><li>Grataridarga, N. (2019). Konsep data, information, knowledge, wisdom (DIKW) hierarchy pada manajemen kearsipan. <i>JIPI (Jurnal Ilmu Perpustakaan dan Informasi)</i>, 4(1), 117–127. <a href="https://jurnal.uinsu.ac.id/index.php/jipi/article/download/4839/2235" target="_blank" rel="noopener">https://jurnal.uinsu.ac.id/index.php/jipi/article/download/4839/2235</a></li><li>
+            Mulyati, Y. S. (2005). Konsep sistem informasi.
+            <i>Jurnal Administrasi Pendidikan</i>, 3(1).
+            <a
+              href="https://doi.org/10.17509/jap.v3i1.6095"
+              target="_blank"
+              rel="noopener"
+              >https://doi.org/10.17509/jap.v3i1.6095</a
+            >
+          </li><li>Nasrulloh, I. A., Raharja, P. A., &amp; Arifa, A. B. (2022). Sistem pakar diagnosis hama dan penyakit pada tanaman kangkung menggunakan metode forward chaining. <i>Jurnal Saintekom</i>, 12(2), 146–157. <a href="https://doi.org/10.33020/saintekom.v12i2.321" target="_blank" rel="noopener">https://doi.org/10.33020/saintekom.v12i2.321</a></li><li>Nursida, Yulianti, L., Gistituati, N., &amp; Hadiyanto. (2024). Peran sistem informasi manajemen (SIM) dalam pengambilan keputusan di SMPN 3 Sawahlunto. <i>Jurnal Niara</i>, 17(1), 223–234. <a href="https://doi.org/10.31849/niara.v17i1.20611" target="_blank" rel="noopener">https://doi.org/10.31849/niara.v17i1.20611</a></li><li>Pradipta, R. A. (2022). Perancangan pemodelan basis data sistem informasi secara konseptual dan logikal. <i>Jurnal Informatika dan Teknik Elektro Terapan</i>, 10(2). <a href="https://doi.org/10.23960/jitet.v10i2.2541" target="_blank" rel="noopener">https://doi.org/10.23960/jitet.v10i2.2541</a></li><li>
+            Sapriadi, S., Syaputra, A. E., Eirlangga, Y. S., Manurung, K. H.,
+            &amp; Hayati, N. (2023). Sistem pakar diagnosa gaya belajar
+            mahasiswa menggunakan metode forward chaining.
+            <i>Jurnal Informasi dan Teknologi</i>, 5(3), 71–78.
+            <a
+              href="https://doi.org/10.60083/jidt.v5i3.381"
+              target="_blank"
+              rel="noopener"
+              >https://doi.org/10.60083/jidt.v5i3.381</a
+            >
+          </li><li>
+            Sari, J. M., Dewi, L. Y., &amp; Pratama, B. E. (2025). Review
+            penerapan metode forward chaining pada sistem pakar berbasis
+            diagnosis di berbagai bidang.
+            <i>Journal of Information System and Education Development</i>,
+            3(4), 9–12.
+            <a
+              href="https://doi.org/10.62386/jised.v3i4.188"
+              target="_blank"
+              rel="noopener"
+              >https://doi.org/10.62386/jised.v3i4.188</a
+            >
+          </li><li>
+            Sartika, D., &amp; Nengsi, A. R. (2022). Kemampuan mahasiswa dalam
+            menerapkan fungsi-fungsi manajemen di sekolah (Studi kasus pada
+            mahasiswa MPI IAIN Takengon). <i>Inspiratif Pendidikan</i>, 11(2),
+            302–313.
+            <a
+              href="https://doi.org/10.24252/ip.v11i2.34147"
+              target="_blank"
+              rel="noopener"
+              >https://doi.org/10.24252/ip.v11i2.34147</a
+            >
+          </li><li>Syahputra, A., Wiranti, R., &amp; Astita, W. (2022). Peran sistem informasi manajemen organisasi dalam pengambilan keputusan. <i>Jurnal Manajemen Sistem Informasi (JMASIF)</i>, 1(1), 26–31. <a href="https://doi.org/10.35870/jmasif.v1i1.67" target="_blank" rel="noopener">https://doi.org/10.35870/jmasif.v1i1.67</a></li><li>Syahputra, R. D., &amp; Aslami, N. (2023). Prinsip-prinsip utama manajemen George R. Terry. <i>Manajemen Kreatif Jurnal (MAKREJU)</i>, 1(3), 51–61. <a href="https://doi.org/10.55606/makreju.v1i3.1615" target="_blank" rel="noopener">https://doi.org/10.55606/makreju.v1i3.1615</a></li><li>
+            Widodo. (2024). Database manajemen system (DBMS) basic concepts.
+            <i>Jurnal Idaaratul 'Ulum (Jurnal Manajemen Pendidikan Islam)</i>,
+            6(1), 32–50.
+            <a
+              href="https://doi.org/10.70688/idaarotululum.v6i01.386"
+              target="_blank"
+              rel="noopener"
+              >https://doi.org/10.70688/idaarotululum.v6i01.386</a
+            >
+          </li><li>Zuraida, V., Kusbianto, D., &amp; Pahlevi, M. R. (2023). Sistem pakar diagnosis penyakit dan hama pada tanaman padi dengan metode forward chaining. <i>Jurnal Minfo Polgan</i>, 12(1), 378–384. <a href="https://doi.org/10.33395/jmp.v12i1.12437" target="_blank" rel="noopener">https://doi.org/10.33395/jmp.v12i1.12437</a></li></ol>
+        <p><b>Sumber web pendukung</b></p>
+        <ol><li>Accurate. (t.t.). <i>Pengertian sistem.</i> <a href="https://accurate.id/marketing-manajemen/pengertian-sistem/" target="_blank" rel="noopener">https://accurate.id/marketing-manajemen/pengertian-sistem/</a></li><li>Amazon Web Services. (t.t.). <i>Apa itu sistem manajemen basis data (DBMS)?</i> <a href="https://aws.amazon.com/id/what-is/dbms/" target="_blank" rel="noopener">https://aws.amazon.com/id/what-is/dbms/</a></li><li>Binus University. (2019). <i>Sistem pakar pada era industri 4.0.</i> <a href="https://binus.ac.id/bandung/2019/11/sistem-pakar-pada-era-industri-4-0/" target="_blank" rel="noopener">https://binus.ac.id/bandung/2019/11/sistem-pakar-pada-era-industri-4-0/</a></li><li>Fakultas Sains dan Teknologi Universitas Airlangga. (2024). <i>Contoh sistem informasi dan implementasinya.</i> <a href="https://si.fst.unair.ac.id/id/2024/04/30/contoh-sistem-informasi-dan-implementasinya/" target="_blank" rel="noopener">https://si.fst.unair.ac.id/id/2024/04/30/contoh-sistem-informasi-dan-implementasinya/</a></li><li>Kementerian Pendidikan Tinggi, Sains, dan Teknologi. (t.t.). <i>Pengantar tata kelola teknologi informasi (I) [Materi kuliah].</i> <a href="https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/540581/mod_resource/content/1/Penganta%20tata%20kelola%20teknologi%20informasi%20%28I%29.pdf" target="_blank" rel="noopener">https://lmsspada.kemdiktisaintek.go.id/pluginfile.php/540581/mod_resource/content/1/Penganta%20tata%20kelola%20teknologi%20informasi%20%28I%29.pdf</a></li><li>Kompas.com. (2021). <i>Fungsi-fungsi manajemen dan contohnya.</i> <a href="https://www.kompas.com/skola/read/2021/06/28/110000169/fungsi-fungsi-manajemen-dan-contohnya?page=all" target="_blank" rel="noopener">https://www.kompas.com/skola/read/2021/06/28/110000169/fungsi-fungsi-manajemen-dan-contohnya?page=all</a></li><li>Kompas.com. (2023a). <i>Informasi: Pengertian, tujuan, manfaat, dan cirinya.</i> <a href="https://www.kompas.com/skola/read/2023/05/30/063000469/informasi--pengertian-tujuan-manfaat-dan-cirinya-" target="_blank" rel="noopener">https://www.kompas.com/skola/read/2023/05/30/063000469/informasi--pengertian-tujuan-manfaat-dan-cirinya-</a></li><li>Kompas.com. (2023b). <i>Informasi: Ciri-ciri, komponen, dan contohnya.</i> <a href="https://www.kompas.com/skola/read/2023/03/23/110000669/informasi--ciri-ciri-komponen-dan-contohnya?page=all" target="_blank" rel="noopener">https://www.kompas.com/skola/read/2023/03/23/110000669/informasi--ciri-ciri-komponen-dan-contohnya?page=all</a></li><li>Telkom University. (t.t.-a). <i>Mengenal konsep manajemen: Pengertian, tujuan, unsur, dan fungsinya.</i> <a href="https://telkomuniversity.ac.id/mengenal-konsep-manajemen-pengertian-tujuan-unsur-dan-fungsinya/" target="_blank" rel="noopener">https://telkomuniversity.ac.id/mengenal-konsep-manajemen-pengertian-tujuan-unsur-dan-fungsinya/</a></li><li>Telkom University. (t.t.-b). <i>Apa itu DBMS? Pengertian, jenis, dan contoh DBMS.</i> <a href="https://bit.telkomuniversity.ac.id/apa-itu-dbms-pengertian-jenis-dan-contoh-dbms/" target="_blank" rel="noopener">https://bit.telkomuniversity.ac.id/apa-itu-dbms-pengertian-jenis-dan-contoh-dbms/</a></li></ol>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Jona Gerry Aoysius Simanjuntak • Tugas PjBL PTI, Prodi Sistem
+      Informasi UINSU
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
