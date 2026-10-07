@@ -2,15 +2,14 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 /* ====== PENGATURAN VIDEO (isi sendiri) ====== */
-const VIDEO_ID = ""; // contoh: bagian setelah v= pada link YouTube
-const VIDEO_TITLE = "[judul video] – [nama channel]";
+const VIDEO_ID = "ykYePBlF-Cw";
+const VIDEO_TITLE = "Pengertian Sistem Informasi – ZENIUS";
 if (VIDEO_ID) {
   $("#yt").src = "https://www.youtube.com/embed/" + VIDEO_ID;
   const a = $("#ytlink");
   a.href = "https://www.youtube.com/watch?v=" + VIDEO_ID;
   a.textContent = VIDEO_TITLE;
 }
-
 /* ====== Tema gelap/terang ====== */
 const root = document.documentElement;
 try {
@@ -234,7 +233,11 @@ const Q = [
   ],
   [
     "Fungsi manajemen POAC adalah…",
-    ["Program, Output, Analisis, Control", "Planning, Organizing, Actuating, Controlling", "Plan, Order, Act, Check"],
+    [
+      "Program, Output, Analisis, Control",
+      "Planning, Organizing, Actuating, Controlling",
+      "Plan, Order, Act, Check",
+    ],
     1,
   ],
   [
